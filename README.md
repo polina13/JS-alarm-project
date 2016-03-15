@@ -1,10 +1,10 @@
-# Title
+# Alarm Clock
 
-#### By Author/s
+#### By Polina Nenchev and Alissa Paluska
 
 ## Description
 
-
+Allows the user to set the time of when to be alerted.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ You will need the following things properly installed on your computer.
 
 ### Legal
 
-Copyright (c) 2016 **Author/s**
+Copyright (c) 2016 **Polina Nenchev and Alissa Paluska**
 
 This software is licensed under the MIT license.
 

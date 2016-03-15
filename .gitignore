@@ -1,6 +1,7 @@
 bower_components/
 build/
 tmp/
+.env
 
 # Logs
 logs

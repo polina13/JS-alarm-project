@@ -6,9 +6,31 @@
     <link rel="stylesheet" href="build/css/styles.css">
   </head>
   <body>
-
-    
-
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Current Time</h1>
+          <h2 id="date"></h2>
+          <h2 id="time"></h2>
+        </div>
+        <div class="col-sm-6">
+          <form>
+            <h2>Set Alarm</h2>
+            <input type="time" name="alarmSet" id="alarmSet">
+            <button class="btn btn-success" type="submit">Set</button>
+          </form>
+        </div>
+      </div>
+      <!-- add class well when ringing -->
+      <div id="display"><h1 id="alarmNotify"></h1>
+        <audio>
+        	<source src="scss/clock.mp3"></source>
+        </audio>
+      </div>
+    </div>
+    <a class="btn btn-success" href="/weather.html">weather</a>
+    <br>
+    <a class="btn btn-success" href="/github.html">github</a>
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
   </body>
