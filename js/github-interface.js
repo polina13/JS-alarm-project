@@ -5,10 +5,10 @@
 //     var username = $('#userName').val();
 //     $.get('https://api.github.com/users/' + username + "/repos").then(function(response) {
 //       $('.showRepos').append("Username: " + username + "</br>");
-//       for (var i = 0; i < response.length; i++) {
-//         $('.showRepos').append("Repo Name: " + i.name + "</br>");
-//         $('.showRepos').append("Repo URL: " + i.html_url);
-//       }
+//       // for (var i = 0; i < response.length; i++) {
+//       //   $('.showRepos').append("Repo Name: " + response[i].name + "</br>");
+//       //   $('.showRepos').append("Repo URL: " + response[i].html_url);
+//       // }
 //       console.log(response);
 //     }).fail(function(error) {
 //       $('.showRepo').text(error.message);
@@ -37,6 +37,7 @@ $(document).ready(function(){
     $('#repoInfo').empty();
     $('#userName').val("");
     $.get('https://api.github.com/users/' + userName, function(data) {
+      console.log(data);
       var newUser = new User(data);
       $('#avatarImage').append(newUser.avatar_image);
       $('#userNameDisplay').append('<h2>' + newUser.username + '</h2>');
@@ -45,6 +46,7 @@ $(document).ready(function(){
       }
       if (newUser.repos) {
         $.get(newUser.repos, function(repoData) {
+          console.log(repoData);
           $('#userRepos').show();
           for (var index in repoData) {
             $('#repoInfo').append('<tr><td><a href="' + repoData[index].html_url + '">' + repoData[index].name + '</a></td><tr>');
